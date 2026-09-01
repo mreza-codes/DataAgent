@@ -1,6 +1,6 @@
 # DataAgent
 
-AI-powered data cleaning agent using a lightweight local reasoning model (DeepSeek-R1-mini) for automatic type detection, semantic understanding, and clean CSV export.  
+**AI-powered data cleaning agent using a lightweight local reasoning model (DeepSeek-R1-mini) for automatic type detection, semantic understanding, and clean CSV export.**
 DataAgent analyzes raw datasets, interprets column types through local LLM reasoning, applies safe preprocessing steps, fixes missing values, encodes categorical features, and produces a fully cleaned dataset ready for analysis or machine learning.
 
 ---
