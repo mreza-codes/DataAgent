@@ -60,7 +60,7 @@ DataAgent/
 │   ├── titanic_cleaned.csv
 │   ├── world_population_cleaned.csv
 │   ├── iris_cleaned.csv
-│   └── sample_raw_datasets (optional)
+│   └── Netflix_Titles_Cleaned.csv 
 │
 └── outputs/   (auto-created on runtime, ignored in Git)
 ```
