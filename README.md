@@ -1,6 +1,6 @@
 # DataAgent
 
-**AI-powered data cleaning agent using a lightweight local reasoning model (DeepSeek-R1-mini) for automatic type detection, semantic understanding, and clean CSV export.**
+**AI-powered data cleaning agent using a lightweight local reasoning model (DeepSeek-R1-mini) for automatic type detection, semantic understanding, and clean CSV export.**  
 DataAgent analyzes raw datasets, interprets column types through local LLM reasoning, applies safe preprocessing steps, fixes missing values, encodes categorical features, and produces a fully cleaned dataset ready for analysis or machine learning.
 
 ---
@@ -10,6 +10,37 @@ DataAgent analyzes raw datasets, interprets column types through local LLM reaso
 Below is a preview of the DataAgent UI:
 
 ![DataAgent Screenshot](./sc.png)
+
+---
+
+# 🔄 Versions
+
+This repository contains two major versions of the DataAgent system:
+
+## **v1 — Original Implementation**
+- First working version of the agent  
+- Basic rule-based cleaning  
+- Limited logging  
+- No duration parsing  
+- No semantic understanding  
+- No ML-based missing value imputation  
+- Suitable for small/simple datasets  
+
+## **v2 — Improved & Stable Version (Recommended)**
+- Fully redesigned cleaning engine  
+- Clear, human-readable logs  
+- Robust duration parsing (`duration_minutes` + `duration_seasons`)  
+- ML-powered missing value imputation  
+- Strong validation layer  
+- Improved DeepSeek reasoning prompt  
+- Stable behavior across all tested datasets  
+- Successfully tested on:
+  - Netflix Titles  
+  - Titanic  
+  - Iris  
+  - World Population  
+
+> **v2 is the recommended version for real-world use.**
 
 ---
 
@@ -43,27 +74,6 @@ Below is a preview of the DataAgent UI:
 
 ---
 
-## 📁 Project Structure
-
-```
-DataAgent/
-│ main.py
-│ agent.py
-│ deepseek_model.py
-│ ui_main.py
-│ icon.ico
-│ sc.png
-│ README.md
-│ requirements.txt
-│
-├── Tests/
-│   ├── titanic_cleaned.csv
-│   ├── world_population_cleaned.csv
-│   ├── iris_cleaned.csv
-│   └── Netflix_Titles_Cleaned.csv 
-│
-└── outputs/   (auto-created on runtime, ignored in Git)
-```
 
 ---
 
@@ -97,25 +107,21 @@ DataAgent/
 ## 🖥️ Running the Application
 
 ### **Method 1 — Run with Python**
-```
 python main.py
-```
 
 ### **Method 2 — Run without console (pythonw)**
-```
 pythonw main.py
-```
+
 
 ---
 
 ## 📦 Requirements
 
-```
 pandas
 numpy
 requests
 PyQt6
-```
+
 
 > No sklearn or scipy required.
 
@@ -128,6 +134,7 @@ The `Tests/` folder contains cleaned versions of common public datasets:
 - Titanic  
 - World Population  
 - Iris  
+- Netflix Titles  
 
 These are included for demonstration and testing purposes.
 
@@ -159,22 +166,8 @@ This project uses public datasets and is intended for educational and research u
 
 ---
 
-## شیوه‌ی کار
-
-۱. بررسی اولیه‌ی جدول و استخراج اطلاعات پایه  
-۲. تشخیص نوع ستون‌ها با کمک مدل هوشمند  
-۳. پاک‌سازی معنایی و اصلاح مقادیر خالی  
-۴. سامان‌دهی ستون‌های دسته‌ای و عددی  
-۵. ذخیره‌ی نسخه‌ی تمیز در پوشه‌ی خروجی
-
----
-
 ## اجرا
 
-```
 اجرای معمول:
 python main.py
-
-
-
 
